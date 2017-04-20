@@ -1,0 +1,2717 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >zookeeper (v3.4.9-3)</a>
+</h1>
+<h4>apache zookeeper client (zookeeper async API >= 3.4.0)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zookeeper">module zookeeper</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zookeeper.</span>fs_promise</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zookeeper.</span>promise</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zookeeper.fs_promise">module zookeeper.fs_promise</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.F_OK">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>F_OK
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.FileReadStream">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>FileReadStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.FileWriteStream">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>FileWriteStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.R_OK">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>R_OK
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.ReadStream">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>ReadStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.Stats">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>Stats
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.W_OK">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>W_OK
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.WriteStream">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>WriteStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.X_OK">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>X_OK
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise._toUnixTimestamp">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>_toUnixTimestamp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.access">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>access
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.appendFile">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>appendFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.chmod">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>chmod
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.chown">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>chown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.close">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.constants">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>constants
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.createReadStream">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>createReadStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.createWriteStream">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>createWriteStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.exists">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>exists
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.fchmod">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fchmod
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.fchown">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fchown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.fdatasync">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fdatasync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.fstat">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fstat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.fsync">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fsync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.ftruncate">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>ftruncate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.futimes">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>futimes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.link">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>link
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.lstat">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>lstat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.mkdir">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>mkdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.mkdtemp">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>mkdtemp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.open">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.read">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.readFile">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>readFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.readdir">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>readdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.readlink">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>readlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.realpath">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>realpath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.rename">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>rename
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.rmdir">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>rmdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.stat">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>stat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.symlink">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>symlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.truncate">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>truncate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.unlink">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>unlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.unwatchFile">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>unwatchFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.utimes">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>utimes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.watch">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>watch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.watchFile">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>watchFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.write">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>write
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.fs_promise.writeFile">
+            function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>writeFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zookeeper.promise">module zookeeper.promise</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.Deferred">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>Deferred
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.Promise">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>Promise
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.all">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>all
+            <span class="apidocSignatureSpan">(array)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.convertNodeAsyncFunction">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>convertNodeAsyncFunction
+            <span class="apidocSignatureSpan">(asyncFunction, callbackNotDeclared)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.defer">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>defer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.delay">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>delay
+            <span class="apidocSignatureSpan">(milliseconds)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.execute">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>execute
+            <span class="apidocSignatureSpan">(asyncFunction)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.first">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>first
+            <span class="apidocSignatureSpan">(array)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.get">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>get
+            <span class="apidocSignatureSpan">(target, property)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.post">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>post
+            <span class="apidocSignatureSpan">(target, methodName, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.put">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>put
+            <span class="apidocSignatureSpan">(target, property, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.seq">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>seq
+            <span class="apidocSignatureSpan">(array, startingValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.wait">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>wait
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.when">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>when
+            <span class="apidocSignatureSpan">(value, resolvedCallback, rejectCallback, progressCallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zookeeper.promise.whenPromise">
+            function <span class="apidocSignatureSpan">zookeeper.promise.</span>whenPromise
+            <span class="apidocSignatureSpan">(value, resolvedCallback, rejectCallback, progressCallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zookeeper.promise.</span>contextHandler</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zookeeper" id="apidoc.module.zookeeper">module zookeeper</a></h1>
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zookeeper.fs_promise" id="apidoc.module.zookeeper.fs_promise">module zookeeper.fs_promise</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.F_OK" id="apidoc.element.zookeeper.fs_promise.F_OK">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>F_OK
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">F_OK = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.FileReadStream" id="apidoc.element.zookeeper.fs_promise.FileReadStream">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>FileReadStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">FileReadStream = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.FileWriteStream" id="apidoc.element.zookeeper.fs_promise.FileWriteStream">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>FileWriteStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">FileWriteStream = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.R_OK" id="apidoc.element.zookeeper.fs_promise.R_OK">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>R_OK
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">R_OK = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.ReadStream" id="apidoc.element.zookeeper.fs_promise.ReadStream">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>ReadStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ReadStream = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.Stats" id="apidoc.element.zookeeper.fs_promise.Stats">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>Stats
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Stats = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.W_OK" id="apidoc.element.zookeeper.fs_promise.W_OK">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>W_OK
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">W_OK = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.WriteStream" id="apidoc.element.zookeeper.fs_promise.WriteStream">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>WriteStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">WriteStream = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.X_OK" id="apidoc.element.zookeeper.fs_promise.X_OK">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>X_OK
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">X_OK = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise._toUnixTimestamp" id="apidoc.element.zookeeper.fs_promise._toUnixTimestamp">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>_toUnixTimestamp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toUnixTimestamp = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.access" id="apidoc.element.zookeeper.fs_promise.access">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>access
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">access = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.appendFile" id="apidoc.element.zookeeper.fs_promise.appendFile">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>appendFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">appendFile = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.chmod" id="apidoc.element.zookeeper.fs_promise.chmod">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>chmod
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chmod = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.chown" id="apidoc.element.zookeeper.fs_promise.chown">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>chown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chown = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.close" id="apidoc.element.zookeeper.fs_promise.close">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.constants" id="apidoc.element.zookeeper.fs_promise.constants">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>constants
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">constants = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.createReadStream" id="apidoc.element.zookeeper.fs_promise.createReadStream">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>createReadStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createReadStream = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.createWriteStream" id="apidoc.element.zookeeper.fs_promise.createWriteStream">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>createWriteStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createWriteStream = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.exists" id="apidoc.element.zookeeper.fs_promise.exists">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>exists
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exists = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.fchmod" id="apidoc.element.zookeeper.fs_promise.fchmod">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fchmod
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fchmod = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.fchown" id="apidoc.element.zookeeper.fs_promise.fchown">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fchown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fchown = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.fdatasync" id="apidoc.element.zookeeper.fs_promise.fdatasync">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fdatasync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fdatasync = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.fstat" id="apidoc.element.zookeeper.fs_promise.fstat">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fstat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fstat = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.fsync" id="apidoc.element.zookeeper.fs_promise.fsync">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>fsync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fsync = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.ftruncate" id="apidoc.element.zookeeper.fs_promise.ftruncate">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>ftruncate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ftruncate = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.futimes" id="apidoc.element.zookeeper.fs_promise.futimes">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>futimes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">futimes = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.link" id="apidoc.element.zookeeper.fs_promise.link">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>link
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.lstat" id="apidoc.element.zookeeper.fs_promise.lstat">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>lstat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lstat = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.mkdir" id="apidoc.element.zookeeper.fs_promise.mkdir">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>mkdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkdir = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.mkdtemp" id="apidoc.element.zookeeper.fs_promise.mkdtemp">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>mkdtemp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkdtemp = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.open" id="apidoc.element.zookeeper.fs_promise.open">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.read" id="apidoc.element.zookeeper.fs_promise.read">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.readFile" id="apidoc.element.zookeeper.fs_promise.readFile">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>readFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFile = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.readdir" id="apidoc.element.zookeeper.fs_promise.readdir">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>readdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readdir = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.readlink" id="apidoc.element.zookeeper.fs_promise.readlink">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>readlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readlink = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.realpath" id="apidoc.element.zookeeper.fs_promise.realpath">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>realpath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">realpath = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.rename" id="apidoc.element.zookeeper.fs_promise.rename">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>rename
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rename = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.rmdir" id="apidoc.element.zookeeper.fs_promise.rmdir">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>rmdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rmdir = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.stat" id="apidoc.element.zookeeper.fs_promise.stat">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>stat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stat = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.symlink" id="apidoc.element.zookeeper.fs_promise.symlink">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>symlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">symlink = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.truncate" id="apidoc.element.zookeeper.fs_promise.truncate">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>truncate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">truncate = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.unlink" id="apidoc.element.zookeeper.fs_promise.unlink">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>unlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlink = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.unwatchFile" id="apidoc.element.zookeeper.fs_promise.unwatchFile">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>unwatchFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unwatchFile = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.utimes" id="apidoc.element.zookeeper.fs_promise.utimes">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>utimes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">utimes = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.watch" id="apidoc.element.zookeeper.fs_promise.watch">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>watch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">watch = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.watchFile" id="apidoc.element.zookeeper.fs_promise.watchFile">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>watchFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">watchFile = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.write" id="apidoc.element.zookeeper.fs_promise.write">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>write
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.fs_promise.writeFile" id="apidoc.element.zookeeper.fs_promise.writeFile">
+        function <span class="apidocSignatureSpan">zookeeper.fs_promise.</span>writeFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeFile = function (){
+  var deferred = new Deferred();
+  arguments.length = arity;
+  arguments[arity - 1] = function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  };
+  asyncFunction.apply(this, arguments);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zookeeper.promise" id="apidoc.module.zookeeper.promise">module zookeeper.promise</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.Deferred" id="apidoc.element.zookeeper.promise.Deferred">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>Deferred
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defer(){
+  return new Deferred();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.Promise" id="apidoc.element.zookeeper.promise.Promise">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>Promise
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defer(){
+  return new Deferred();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.all" id="apidoc.element.zookeeper.promise.all">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>all
+        <span class="apidocSignatureSpan">(array)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">all = function (array){
+  var deferred = new Deferred();
+  if(!(array instanceof Array)){
+    array = Array.prototype.slice.call(arguments);
+  }
+  var fulfilled = 0, length = array.length;
+  var results = [];
+  if (length === 0) deferred.resolve(results);
+  else {
+    array.forEach(function(promise, index){
+      exports.when(promise, each, each);
+      function each(value){
+        results[index] = value;
+        fulfilled++;
+        if(fulfilled === length){
+          deferred.resolve(results);
+        }
+      }
+    });
+  }
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.convertNodeAsyncFunction" id="apidoc.element.zookeeper.promise.convertNodeAsyncFunction">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>convertNodeAsyncFunction
+        <span class="apidocSignatureSpan">(asyncFunction, callbackNotDeclared)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convertNodeAsyncFunction = function (asyncFunction, callbackNotDeclared){
+  var arity = asyncFunction.length;
+  if(callbackNotDeclared){
+    arity++;
+  }
+  return function(){
+    var deferred = new Deferred();
+    arguments.length = arity;
+    arguments[arity - 1] = function(error, result){
+      if(error) {
+        deferred.emitError(error);
+      }
+      else {
+        if(arguments.length &#x3e; 2){
+          // if there are multiple success values, we return an array
+          Array.prototype.shift.call(arguments, 1);
+          deferred.emitSuccess(arguments);
+        }
+        else{
+          deferred.emitSuccess(result);
+        }
+      }
+    };
+    asyncFunction.apply(this, arguments);
+    return deferred.promise;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.defer" id="apidoc.element.zookeeper.promise.defer">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>defer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defer(){
+  return new Deferred();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.delay" id="apidoc.element.zookeeper.promise.delay">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>delay
+        <span class="apidocSignatureSpan">(milliseconds)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delay = function (milliseconds) {
+  var deferred = new Deferred();
+  setTimeout(function(){
+    deferred.resolve();
+  }, milliseconds);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.execute" id="apidoc.element.zookeeper.promise.execute">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>execute
+        <span class="apidocSignatureSpan">(asyncFunction)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">execute = function (asyncFunction){
+  var args = Array.prototype.slice.call(arguments, 1);
+
+  var deferred = new Deferred();
+  args.push(function(error, result){
+    if(error) {
+      deferred.emitError(error);
+    }
+    else {
+      if(arguments.length &#x3e; 2){
+        // if there are multiple success values, we return an array
+        Array.prototype.shift.call(arguments, 1);
+        deferred.emitSuccess(arguments);
+      }
+      else{
+        deferred.emitSuccess(result);
+      }
+    }
+  });
+  asyncFunction.apply(this, args);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.first" id="apidoc.element.zookeeper.promise.first">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>first
+        <span class="apidocSignatureSpan">(array)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">first = function (array){
+  var deferred = new Deferred();
+  if(!(array instanceof Array)){
+    array = Array.prototype.slice.call(arguments);
+  }
+  var fulfilled;
+  array.forEach(function(promise, index){
+    exports.when(promise, function(value){
+      if (!fulfilled) {
+        fulfilled = true;
+        deferred.resolve(value);
+      }
+    },
+    function(error){
+      if (!fulfilled) {
+        fulfilled = true;
+        deferred.resolve(error);
+      }
+    });
+  });
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.get" id="apidoc.element.zookeeper.promise.get">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>get
+        <span class="apidocSignatureSpan">(target, property)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (target, property){
+  return perform(target, function(target){
+    return target.get(property);
+  },
+  function(target){
+    return target[property]
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Gets the value of a property in a future turn.
+ * @param target  promise or value for target object
+ * @param property    name of property to get
+ * @return promise for the property value
+ */
+exports.get = function(target, property){
+  return perform(target, function(target){
+    return target.<span class="apidocCodeKeywordSpan">get</span>(property);
+  },
+  function(target){
+    return target[property]
+  });
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.post" id="apidoc.element.zookeeper.promise.post">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>post
+        <span class="apidocSignatureSpan">(target, methodName, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (target, methodName, args){
+  return perform(target, function(target){
+    return target.call(property, args);
+  },
+  function(target){
+    return target[methodName].apply(target, args);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.put" id="apidoc.element.zookeeper.promise.put">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>put
+        <span class="apidocSignatureSpan">(target, property, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (target, property, value){
+  return perform(target, function(target){
+    return target.put(property, value);
+  },
+  function(target){
+    return target[property] = value;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @param target  promise or value for target object
+ * @param property    name of property to set
+ * @param value   new value of property
+ * @return promise for the return value
+ */
+exports.put = function(target, property, value){
+  return perform(target, function(target){
+    return target.<span class="apidocCodeKeywordSpan">put</span>(property, value);
+  },
+  function(target){
+    return target[property] = value;
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.seq" id="apidoc.element.zookeeper.promise.seq">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>seq
+        <span class="apidocSignatureSpan">(array, startingValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seq = function (array, startingValue){
+  array = array.concat(); // make a copy
+  var deferred = new Deferred();
+  function next(value){
+    var nextAction = array.shift();
+    if(nextAction){
+      exports.when(nextAction(value), next, deferred.reject);
+    }
+    else {
+      deferred.resolve(value);
+    }
+  }
+  next(startingValue);
+  return deferred.promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.wait" id="apidoc.element.zookeeper.promise.wait">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>wait
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">wait = function (target){
+  if(!queue){
+    throw new Error(&#x22;Can not wait, the event-queue module is not available&#x22;);
+  }
+  if(target &#x26;&#x26; typeof target.then === &#x22;function&#x22;){
+    var isFinished, isError, result;
+    target.then(function(value){
+      isFinished = true;
+      result = value;
+    },
+    function(error){
+      isFinished = true;
+      isError = true;
+      result = error;
+    });
+    while(!isFinished){
+      queue.processNextEvent(true);
+    }
+    if(isError){
+      throw result;
+    }
+    return result;
+  }
+  else{
+    return target;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Promise.prototype.addCallbacks = function(callback, errback){
+return this.then(callback, errback);
+};
+
+/*NodeJS method*/
+Promise.prototype.wait = function(){
+return exports.<span class="apidocCodeKeywordSpan">wait</span>(this);
+};
+
+Deferred.prototype = Promise.prototype;
+// A deferred provides an API for creating and resolving a promise.
+exports.Promise = exports.Deferred = exports.defer = defer;
+function defer(){
+return new Deferred();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.when" id="apidoc.element.zookeeper.promise.when">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>when
+        <span class="apidocSignatureSpan">(value, resolvedCallback, rejectCallback, progressCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">when = function (value, resolvedCallback, rejectCallback, progressCallback){
+  if(value &#x26;&#x26; typeof value.then === &#x22;function&#x22;){
+    return exports.whenPromise(value, resolvedCallback, rejectCallback, progressCallback);
+  }
+  return resolvedCallback(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  array = Array.prototype.slice.call(arguments);
+}
+var fulfilled = 0, length = array.length;
+var results = [];
+if (length === 0) deferred.resolve(results);
+else {
+  array.forEach(function(promise, index){
+    exports.<span class="apidocCodeKeywordSpan">when</span>(promise, each, each);
+    function each(value){
+      results[index] = value;
+      fulfilled++;
+      if(fulfilled === length){
+        deferred.resolve(results);
+      }
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zookeeper.promise.whenPromise" id="apidoc.element.zookeeper.promise.whenPromise">
+        function <span class="apidocSignatureSpan">zookeeper.promise.</span>whenPromise
+        <span class="apidocSignatureSpan">(value, resolvedCallback, rejectCallback, progressCallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">whenPromise = function (value, resolvedCallback, rejectCallback, progressCallback){
+  return perform(value, function(value){
+    return value.then(resolvedCallback, rejectCallback, progressCallback);
+  },
+  function(value){
+    return resolvedCallback(value);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param rejectCallback  function to be called with the rejection reason
+* @param progressCallback  function to be called when progress is made
+* @return promise for the return value from the invoked callback or the value if it
+* is a non-promise value
+*/
+exports.when = function(value, resolvedCallback, rejectCallback, progressCallback){
+ if(value &#x26;&#x26; typeof value.then === &#x22;function&#x22;){
+   return exports.<span class="apidocCodeKeywordSpan">whenPromise</span>(value, resolvedCallback, rejectCallback, progressCallback
+);
+ }
+ return resolvedCallback(value);
+};
+
+/**
+* Gets the value of a property in a future turn.
+* @param target  promise or value for target object
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
